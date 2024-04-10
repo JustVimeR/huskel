@@ -1,0 +1,1 @@
+start Haskell - runghc lab3.hs
