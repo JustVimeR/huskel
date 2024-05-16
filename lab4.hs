@@ -28,5 +28,12 @@ processGrammar grammarStr = do
 
 main :: IO ()
 main = do
-    let examples = [unlines ["S -> S a","S -> b","A -> S c","A -> d"],unlines [ "S -> S a","S -> S b","S -> c"],unlines ["S -> c S","S -> d"],unlines ["S -> S a b","S -> a"],unlines ["S -> b S a","S -> a"],unlines ["S -> S a","S -> b","A -> A c","A -> S d","A -> e","B -> b B","B -> A"]]
+    let examples = [ "S -> S a\nS -> b\nA -> S c\nA -> d"
+                   , "S -> S a\nS -> S b\nS -> c"
+                   , "S -> c S\nS -> d"
+                   , "S -> S a b\nS -> a"
+                   , "S -> b S a\nS -> a"
+                   , "S -> S a\nS -> b\nA -> A c\nA -> S d\nA -> e\nB -> b B\nB -> A"
+                   ]
     mapM_ processGrammar examples
+
